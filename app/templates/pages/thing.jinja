@@ -2,20 +2,14 @@
 
 {% block title %}
 
-    Flask and Supabase Demo
+    Single Thing
 
 {% endblock %}
 
 
 {% block content %}
 
-    <section id="hero">
-        <h1>Flask and Supabase Demo</h1>
-    </section>
-
     <section id="things">
-
-        {% for thing in things %}
 
             <article>
 
@@ -25,15 +19,15 @@
 
                 <p>{{ thing["description"] }}</p>
 
-                <footer>
-                    <a href="/thing/{{ thing['id']  }}">More..</a>
+                <p>Cost <strong>${{ thing["cost"] }}</strong></p>
 
-                    <a href="/delete/{{ thing['id'] }}">Delete</a>
+                <p>Rating <strong>{{ thing["rating"] }}</strong> / 5</p>
+
+                <footer>
+                    Delete
                 </footer>
 
             </article>
-
-        {% endfor %}
 
     </section>
 
